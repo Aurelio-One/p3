@@ -54,6 +54,7 @@
         }
 
         h2 {
+            position: relative;
             text-transform: uppercase;
             font-weight: 300;
             font-size: 16px;
@@ -134,5 +135,120 @@
             padding: 0 50px;
             margin: 30px auto 0 auto;
         }
+    }
+}
+
+
+
+/* ANIMATIONS */
+
+
+/* menu item loading */
+
+.menu-item,
+h2 {
+    opacity: 0;
+    animation: load 1s ease 500ms;
+    animation-fill-mode: forwards;
+}
+
+@for $i from 1 through 100 {
+    .menu *:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.2}s;
+    }
+}
+
+@keyframes load {
+    0% {
+        opacity: 0;
+        top: 15px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+/* menu item hover */
+
+.menu-item:hover {
+    .selected {
+        cursor: pointer;
+        animation: selected 500ms ease;
+        animation-fill-mode: forwards;
+
+        i {
+            animation: selected-icon 500ms ease;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+.menu-item:hover .menu-item-details {
+    cursor: pointer;
+    animation: item-shrink 500ms ease;
+    animation-fill-mode: forwards;
+
+}
+
+.menu-item .selected {
+    animation: unselected 500ms ease;
+    animation-fill-mode: forwards;
+}
+
+.menu-item .menu-item-details {
+    animation: item-grow 500ms ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes selected {
+    from {
+        right: -60px;
+    }
+
+    to {
+        right: 0
+    }
+}
+
+@keyframes unselected {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: -60px;
+    }
+}
+
+@keyframes selected-icon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes item-shrink {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: calc(100% - 60px)
+    }
+}
+
+@keyframes item-grow {
+    from {
+        width: calc(100% - 60px)
+    }
+
+    to {
+        width: 100%;
     }
 }
