@@ -28,16 +28,6 @@
         font-size: 20px;
         line-height: 24px;
     }
-
-    button {
-        border-radius: 50px;
-        height: 50px;
-        padding: 0 25px;
-        margin: 10px 0;
-        color: #FFF;
-        border: none;
-        background: linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);
-    }
 }
 
 /* HOWTO SECTION */
@@ -88,6 +78,7 @@
     background-color: $background-extra-light;
 
     .card {
+        display: block;
         position: relative;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
         margin-bottom: 15px;
@@ -122,20 +113,6 @@
 
             div span {
                 font-weight: 300;
-            }
-
-            i {
-                font-weight: 100;
-                font-size: 26px;
-                height: 40px;
-
-                &:hover {
-                    font-weight: 900;
-                    background: linear-gradient(0deg, $secondary-color 0%, $primary-color 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    cursor: pointer;
-                }
             }
         }
     }

@@ -1,3 +1,117 @@
-
+.menu-page {
+  /* HEADER */
+  /* MAIN SECTION */
+}
+.menu-page header {
+  text-align: center;
+}
+.menu-page header nav {
+  position: absolute;
+  padding-left: 25px;
+}
+.menu-page header nav i {
+  font-size: 18px;
+  height: 60px;
+  line-height: 60px;
+}
+.menu-page header img {
+  margin-top: 15px;
+}
+.menu-page header .restaurant-image {
+  width: 100%;
+  object-fit: cover;
+}
+.menu-page .menu-section {
+  border-radius: 35px 35px 0 0;
+  margin-top: -35px;
+  background-color: #FFF;
+  position: relative;
+  padding: 40px 15px;
+  background-color: #F6F6F6;
+  width: 100%;
+}
+.menu-page .menu-section .flexbox.column {
+  row-gap: 10px;
+}
+.menu-page .menu-section h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+}
+.menu-page .menu-section i.fa-heart {
+  position: absolute;
+  right: 25px;
+  font-size: 30px;
+  top: 40px;
+}
+.menu-page .menu-section h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.menu-page .menu-section h2:after {
+  content: "";
+  display: block;
+  width: 40px;
+  margin-bottom: 5px;
+  border-bottom: 3px solid #9BE1D0;
+}
+.menu-page .menu-section h2:not(:first-child) {
+  margin-top: 20px;
+}
+.menu-page .menu-section .menu-item {
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  height: 70px;
+  overflow: hidden;
+  position: relative;
+}
+.menu-page .menu-section .menu-item .selected {
+  background-color: #9BE1D0;
+  color: #FFF;
+  border-radius: 0 10px 10px 0;
+  width: 60px;
+  text-align: center;
+  height: 70px;
+  line-height: 70px;
+  position: absolute;
+  right: -60px;
+}
+.menu-page .menu-section .menu-item .selected i {
+  font-size: 22px;
+}
+.menu-page .menu-section .menu-item .menu-item-details {
+  align-items: end;
+  width: calc(100% - 0px);
+}
+.menu-page .menu-section .menu-item .menu-item-details .menu-item-name {
+  padding: 10px 25px 10px 10px;
+  overflow: hidden;
+}
+.menu-page .menu-section .menu-item .menu-item-details .menu-item-name h3 {
+  margin-bottom: 5px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-page .menu-section .menu-item .menu-item-details .menu-item-name span {
+  display: block;
+  font-weight: 300;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-page .menu-section .menu-item .menu-item-details .menu-item-price {
+  text-align: right;
+  font-weight: 700;
+  padding: 10px 25px 10px 0;
+}
+.menu-page .menu-section button {
+  padding: 0 50px;
+  margin: 30px auto 0 auto;
+}
 
 /*# sourceMappingURL=menu.css.map */

@@ -23,15 +23,6 @@
   font-size: 20px;
   line-height: 24px;
 }
-.top-section button {
-  border-radius: 50px;
-  height: 50px;
-  padding: 0 25px;
-  margin: 10px 0;
-  color: #FFF;
-  border: none;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-}
 
 /* HOWTO SECTION */
 .howto .step {
@@ -74,6 +65,7 @@
   background-color: #F6F6F6;
 }
 .restaurants .card {
+  display: block;
   position: relative;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
@@ -105,18 +97,6 @@
 }
 .restaurants .card .details div span {
   font-weight: 300;
-}
-.restaurants .card .details i {
-  font-weight: 100;
-  font-size: 26px;
-  height: 40px;
-}
-.restaurants .card .details i:hover {
-  font-weight: 900;
-  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */

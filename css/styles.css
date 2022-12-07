@@ -34,6 +34,20 @@ a {
   color: inherit;
 }
 
+button {
+  display: block;
+  border-radius: 50px;
+  height: 50px;
+  padding: 0 25px;
+  margin: 10px auto;
+  color: #FFF;
+  border: none;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+button:hover {
+  cursor: pointer;
+}
+
 /* UTILITIES */
 .flexbox {
   display: flex;
@@ -58,6 +72,20 @@ a {
 /* HEADER */
 header .header-logo {
   height: 60px;
+}
+
+/* LIKE ICON BEHAVIOR */
+i.fa-heart {
+  font-weight: 100;
+  font-size: 26px;
+  height: 40px;
+}
+i.fa-heart:hover {
+  font-weight: 900;
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 
 /* FOOTER */
