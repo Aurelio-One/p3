@@ -192,3 +192,17 @@
         }
     }
 }
+
+/* TABLET + DESKTOP VIEW */
+@media screen and (min-width: 768px) {
+    .restaurants-list.flexbox {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .restaurants .card {
+        margin-bottom: 0;
+        flex: 1 1 calc(50% - 10px);
+    }
+}
