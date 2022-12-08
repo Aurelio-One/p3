@@ -5,8 +5,7 @@
     height: 100%;
     width: 100vw;
     background-color: #FFF;
-    animation: loader 500ms ease 3s;
-    animation-fill-mode: forwards;
+    animation: loader 500ms ease 3s forwards;
     text-align: center;
     font-size: 100%;
     position: absolute;
@@ -169,8 +168,9 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            background-color: #9be2d0;
+            background-color: $tertiary-color;
             color: #128667;
+            color: darken($tertiary-color, 35%);
             height: 30px;
             line-height: 30px;
             padding: 0 10px;

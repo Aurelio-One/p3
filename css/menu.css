@@ -55,7 +55,7 @@
   display: block;
   width: 40px;
   margin-bottom: 5px;
-  border-bottom: 3px solid #9BE1D0;
+  border-bottom: 3px solid #99E2D0;
 }
 .menu-page .menu-section h2:not(:first-child) {
   margin-top: 20px;
@@ -69,7 +69,7 @@
   position: relative;
 }
 .menu-page .menu-section .menu-item .selected {
-  background-color: #9BE1D0;
+  background-color: #99E2D0;
   color: #FFF;
   border-radius: 0 10px 10px 0;
   width: 60px;

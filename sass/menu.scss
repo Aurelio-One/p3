@@ -65,7 +65,7 @@
                 display: block;
                 width: 40px;
                 margin-bottom: 5px;
-                border-bottom: 3px solid #9BE1D0;
+                border-bottom: 3px solid $tertiary-color;
             }
 
             &:not(:first-child) {
@@ -82,7 +82,7 @@
             position: relative;
 
             .selected {
-                background-color: #9BE1D0;
+                background-color: $tertiary-color;
                 color: #FFF;
                 border-radius: 0 10px 10px 0;
                 width: 60px;
