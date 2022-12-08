@@ -1,5 +1,78 @@
 @import 'variables';
 
+/*LOADER */
+.loader {
+    height: 100%;
+    width: 100vw;
+    background-color: #FFF;
+    animation: loader 500ms ease 103s;
+    animation-fill-mode: forwards;
+    text-align: center;
+    font-size: 100%;
+    position: absolute;
+    z-index: 1;
+
+    .ohmyfood {
+        font-family: $secondary-font;
+        background: linear-gradient(90deg, $primary-color 0%, $secondary-color 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: 1.5s blink ease infinite;
+        font-size: 5vw;
+        padding: 50px;
+    }
+
+    .spinner {
+        position: absolute;
+        width: 40vw;
+        height: 40vw;
+        border: .5vw solid $secondary-color;
+        border-bottom-color: $primary-color;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes loader {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* LOCATION */
 .location {
     background-color: $background-light;
@@ -62,9 +135,11 @@
                 width: 40px;
             }
         }
+
         &:last-child {
             .label {
                 background-color: lighten($primary-color, 35%);
+
                 i {
                     color: $primary-color;
                 }
@@ -104,7 +179,7 @@
 
         .details {
             height: 75px;
-            padding: 0 25px 0 10px;
+            padding: 10px 25px 0 10px;
             position: relative;
 
             h3 {
