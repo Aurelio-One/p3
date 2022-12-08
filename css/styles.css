@@ -86,14 +86,29 @@ header .header-logo {
 i.fa-heart {
   font-weight: 100;
   font-size: 26px;
-  height: 40px;
+  height: 26px;
+  display: inline-block;
+  position: relative;
+  color: #000;
 }
 i.fa-heart:hover {
-  font-weight: 900;
+  cursor: pointer;
+}
+i.fa-heart:after {
+  font-family: FontAwesome;
+  content: "\f004";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  overflow: hidden;
   background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  cursor: pointer;
+  animation: like-empty 500ms ease forwards;
+}
+i.fa-heart:hover:after {
+  animation: like-fill 500ms ease forwards;
 }
 
 /* FOOTER */
@@ -109,6 +124,24 @@ footer span {
 }
 footer a i {
   width: 25px;
+}
+
+/* ANIMATIONS */
+@keyframes like-fill {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes like-empty {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

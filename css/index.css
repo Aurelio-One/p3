@@ -3,7 +3,7 @@
   height: 100%;
   width: 100vw;
   background-color: #FFF;
-  animation: loader 500ms ease 103s;
+  animation: loader 500ms ease 3s;
   animation-fill-mode: forwards;
   text-align: center;
   font-size: 100%;
