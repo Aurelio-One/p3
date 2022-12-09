@@ -2,6 +2,7 @@
   /* HEADER */
   /* MAIN SECTION */
   /* MENU ITEMS LOADING ANIMATION */
+  /* TABLET + DESKTOP VIEW */
 }
 .menu-page header {
   text-align: center;
@@ -23,6 +24,10 @@
   object-fit: cover;
 }
 .menu-page .menu-section {
+  max-width: 1200px;
+  margin: auto;
+}
+.menu-page .menu-section {
   border-radius: 35px 35px 0 0;
   margin-top: -35px;
   background-color: #FFF;
@@ -36,8 +41,7 @@
 }
 .menu-page .menu-section h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 28px;
-  max-width: calc(100vw - 100px);
+  font-size: 26px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -66,48 +70,43 @@
   margin-top: 20px;
 }
 .menu-page .menu-section .menu-item {
+  max-width: 100%;
+  padding: 15px;
   background-color: #FFF;
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  height: 70px;
   overflow: hidden;
-  position: relative;
+  cursor: pointer;
   /* MENU ITEM HOVER ANIMATION */
 }
 .menu-page .menu-section .menu-item .selected {
   background-color: #99E2D0;
   color: #FFF;
   border-radius: 0 10px 10px 0;
+  margin: -15px -75px -15px 25px;
   width: 60px;
-  text-align: center;
-  height: 70px;
-  line-height: 75px;
-  position: absolute;
-  right: -60px;
-  transition: right 500ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 500ms;
 }
 .menu-page .menu-section .menu-item .selected i {
   font-size: 22px;
   transform: rotate(0deg);
   transition: transform 500ms ease;
 }
-.menu-page .menu-section .menu-item .menu-item-details {
-  align-items: end;
-  width: calc(100% - 0px);
-  transition: width 500ms ease;
-}
-.menu-page .menu-section .menu-item .menu-item-details .menu-item-name {
-  padding: 10px 25px 10px 10px;
+.menu-page .menu-section .menu-item .menu-item-name {
   overflow: hidden;
+  flex: 1;
 }
-.menu-page .menu-section .menu-item .menu-item-details .menu-item-name h3 {
+.menu-page .menu-section .menu-item .menu-item-name h3 {
   margin-bottom: 5px;
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-page .menu-section .menu-item .menu-item-details .menu-item-name span {
+.menu-page .menu-section .menu-item .menu-item-name span {
   display: block;
   font-weight: 300;
   font-size: 14px;
@@ -115,22 +114,19 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-page .menu-section .menu-item .menu-item-details .menu-item-price {
+.menu-page .menu-section .menu-item .menu-item-price {
   text-align: right;
   font-weight: 700;
-  padding: 10px 25px 10px 0;
-}
-.menu-page .menu-section .menu-item:hover {
-  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
 }
 .menu-page .menu-section .menu-item:hover .selected {
-  right: 0;
+  margin-right: -15px;
 }
 .menu-page .menu-section .menu-item:hover .selected i {
   transform: rotate(360deg);
-}
-.menu-page .menu-section .menu-item:hover .menu-item-details {
-  width: calc(100% - 60px);
 }
 .menu-page .menu-section .btn {
   padding: 0 50px;
@@ -139,316 +135,85 @@
 .menu-page .menu-item,
 .menu-page h2 {
   opacity: 0;
-  animation: load 1s ease 500ms forwards;
+  animation: load 1s forwards;
 }
 .menu-page .menu *:nth-child(1n) {
-  animation-delay: 0.2s;
+  animation-delay: 0.25s;
 }
 .menu-page .menu *:nth-child(2n) {
-  animation-delay: 0.4s;
+  animation-delay: 0.5s;
 }
 .menu-page .menu *:nth-child(3n) {
-  animation-delay: 0.6s;
+  animation-delay: 0.75s;
 }
 .menu-page .menu *:nth-child(4n) {
-  animation-delay: 0.8s;
-}
-.menu-page .menu *:nth-child(5n) {
   animation-delay: 1s;
 }
+.menu-page .menu *:nth-child(5n) {
+  animation-delay: 1.25s;
+}
 .menu-page .menu *:nth-child(6n) {
-  animation-delay: 1.2s;
+  animation-delay: 1.5s;
 }
 .menu-page .menu *:nth-child(7n) {
-  animation-delay: 1.4s;
+  animation-delay: 1.75s;
 }
 .menu-page .menu *:nth-child(8n) {
-  animation-delay: 1.6s;
-}
-.menu-page .menu *:nth-child(9n) {
-  animation-delay: 1.8s;
-}
-.menu-page .menu *:nth-child(10n) {
   animation-delay: 2s;
 }
+.menu-page .menu *:nth-child(9n) {
+  animation-delay: 2.25s;
+}
+.menu-page .menu *:nth-child(10n) {
+  animation-delay: 2.5s;
+}
 .menu-page .menu *:nth-child(11n) {
-  animation-delay: 2.2s;
+  animation-delay: 2.75s;
 }
 .menu-page .menu *:nth-child(12n) {
-  animation-delay: 2.4s;
-}
-.menu-page .menu *:nth-child(13n) {
-  animation-delay: 2.6s;
-}
-.menu-page .menu *:nth-child(14n) {
-  animation-delay: 2.8s;
-}
-.menu-page .menu *:nth-child(15n) {
   animation-delay: 3s;
 }
+.menu-page .menu *:nth-child(13n) {
+  animation-delay: 3.25s;
+}
+.menu-page .menu *:nth-child(14n) {
+  animation-delay: 3.5s;
+}
+.menu-page .menu *:nth-child(15n) {
+  animation-delay: 3.75s;
+}
 .menu-page .menu *:nth-child(16n) {
-  animation-delay: 3.2s;
-}
-.menu-page .menu *:nth-child(17n) {
-  animation-delay: 3.4s;
-}
-.menu-page .menu *:nth-child(18n) {
-  animation-delay: 3.6s;
-}
-.menu-page .menu *:nth-child(19n) {
-  animation-delay: 3.8s;
-}
-.menu-page .menu *:nth-child(20n) {
   animation-delay: 4s;
 }
-.menu-page .menu *:nth-child(21n) {
-  animation-delay: 4.2s;
+.menu-page .menu *:nth-child(17n) {
+  animation-delay: 4.25s;
 }
-.menu-page .menu *:nth-child(22n) {
-  animation-delay: 4.4s;
+.menu-page .menu *:nth-child(18n) {
+  animation-delay: 4.5s;
 }
-.menu-page .menu *:nth-child(23n) {
-  animation-delay: 4.6s;
+.menu-page .menu *:nth-child(19n) {
+  animation-delay: 4.75s;
 }
-.menu-page .menu *:nth-child(24n) {
-  animation-delay: 4.8s;
-}
-.menu-page .menu *:nth-child(25n) {
+.menu-page .menu *:nth-child(20n) {
   animation-delay: 5s;
-}
-.menu-page .menu *:nth-child(26n) {
-  animation-delay: 5.2s;
-}
-.menu-page .menu *:nth-child(27n) {
-  animation-delay: 5.4s;
-}
-.menu-page .menu *:nth-child(28n) {
-  animation-delay: 5.6s;
-}
-.menu-page .menu *:nth-child(29n) {
-  animation-delay: 5.8s;
-}
-.menu-page .menu *:nth-child(30n) {
-  animation-delay: 6s;
-}
-.menu-page .menu *:nth-child(31n) {
-  animation-delay: 6.2s;
-}
-.menu-page .menu *:nth-child(32n) {
-  animation-delay: 6.4s;
-}
-.menu-page .menu *:nth-child(33n) {
-  animation-delay: 6.6s;
-}
-.menu-page .menu *:nth-child(34n) {
-  animation-delay: 6.8s;
-}
-.menu-page .menu *:nth-child(35n) {
-  animation-delay: 7s;
-}
-.menu-page .menu *:nth-child(36n) {
-  animation-delay: 7.2s;
-}
-.menu-page .menu *:nth-child(37n) {
-  animation-delay: 7.4s;
-}
-.menu-page .menu *:nth-child(38n) {
-  animation-delay: 7.6s;
-}
-.menu-page .menu *:nth-child(39n) {
-  animation-delay: 7.8s;
-}
-.menu-page .menu *:nth-child(40n) {
-  animation-delay: 8s;
-}
-.menu-page .menu *:nth-child(41n) {
-  animation-delay: 8.2s;
-}
-.menu-page .menu *:nth-child(42n) {
-  animation-delay: 8.4s;
-}
-.menu-page .menu *:nth-child(43n) {
-  animation-delay: 8.6s;
-}
-.menu-page .menu *:nth-child(44n) {
-  animation-delay: 8.8s;
-}
-.menu-page .menu *:nth-child(45n) {
-  animation-delay: 9s;
-}
-.menu-page .menu *:nth-child(46n) {
-  animation-delay: 9.2s;
-}
-.menu-page .menu *:nth-child(47n) {
-  animation-delay: 9.4s;
-}
-.menu-page .menu *:nth-child(48n) {
-  animation-delay: 9.6s;
-}
-.menu-page .menu *:nth-child(49n) {
-  animation-delay: 9.8s;
-}
-.menu-page .menu *:nth-child(50n) {
-  animation-delay: 10s;
-}
-.menu-page .menu *:nth-child(51n) {
-  animation-delay: 10.2s;
-}
-.menu-page .menu *:nth-child(52n) {
-  animation-delay: 10.4s;
-}
-.menu-page .menu *:nth-child(53n) {
-  animation-delay: 10.6s;
-}
-.menu-page .menu *:nth-child(54n) {
-  animation-delay: 10.8s;
-}
-.menu-page .menu *:nth-child(55n) {
-  animation-delay: 11s;
-}
-.menu-page .menu *:nth-child(56n) {
-  animation-delay: 11.2s;
-}
-.menu-page .menu *:nth-child(57n) {
-  animation-delay: 11.4s;
-}
-.menu-page .menu *:nth-child(58n) {
-  animation-delay: 11.6s;
-}
-.menu-page .menu *:nth-child(59n) {
-  animation-delay: 11.8s;
-}
-.menu-page .menu *:nth-child(60n) {
-  animation-delay: 12s;
-}
-.menu-page .menu *:nth-child(61n) {
-  animation-delay: 12.2s;
-}
-.menu-page .menu *:nth-child(62n) {
-  animation-delay: 12.4s;
-}
-.menu-page .menu *:nth-child(63n) {
-  animation-delay: 12.6s;
-}
-.menu-page .menu *:nth-child(64n) {
-  animation-delay: 12.8s;
-}
-.menu-page .menu *:nth-child(65n) {
-  animation-delay: 13s;
-}
-.menu-page .menu *:nth-child(66n) {
-  animation-delay: 13.2s;
-}
-.menu-page .menu *:nth-child(67n) {
-  animation-delay: 13.4s;
-}
-.menu-page .menu *:nth-child(68n) {
-  animation-delay: 13.6s;
-}
-.menu-page .menu *:nth-child(69n) {
-  animation-delay: 13.8s;
-}
-.menu-page .menu *:nth-child(70n) {
-  animation-delay: 14s;
-}
-.menu-page .menu *:nth-child(71n) {
-  animation-delay: 14.2s;
-}
-.menu-page .menu *:nth-child(72n) {
-  animation-delay: 14.4s;
-}
-.menu-page .menu *:nth-child(73n) {
-  animation-delay: 14.6s;
-}
-.menu-page .menu *:nth-child(74n) {
-  animation-delay: 14.8s;
-}
-.menu-page .menu *:nth-child(75n) {
-  animation-delay: 15s;
-}
-.menu-page .menu *:nth-child(76n) {
-  animation-delay: 15.2s;
-}
-.menu-page .menu *:nth-child(77n) {
-  animation-delay: 15.4s;
-}
-.menu-page .menu *:nth-child(78n) {
-  animation-delay: 15.6s;
-}
-.menu-page .menu *:nth-child(79n) {
-  animation-delay: 15.8s;
-}
-.menu-page .menu *:nth-child(80n) {
-  animation-delay: 16s;
-}
-.menu-page .menu *:nth-child(81n) {
-  animation-delay: 16.2s;
-}
-.menu-page .menu *:nth-child(82n) {
-  animation-delay: 16.4s;
-}
-.menu-page .menu *:nth-child(83n) {
-  animation-delay: 16.6s;
-}
-.menu-page .menu *:nth-child(84n) {
-  animation-delay: 16.8s;
-}
-.menu-page .menu *:nth-child(85n) {
-  animation-delay: 17s;
-}
-.menu-page .menu *:nth-child(86n) {
-  animation-delay: 17.2s;
-}
-.menu-page .menu *:nth-child(87n) {
-  animation-delay: 17.4s;
-}
-.menu-page .menu *:nth-child(88n) {
-  animation-delay: 17.6s;
-}
-.menu-page .menu *:nth-child(89n) {
-  animation-delay: 17.8s;
-}
-.menu-page .menu *:nth-child(90n) {
-  animation-delay: 18s;
-}
-.menu-page .menu *:nth-child(91n) {
-  animation-delay: 18.2s;
-}
-.menu-page .menu *:nth-child(92n) {
-  animation-delay: 18.4s;
-}
-.menu-page .menu *:nth-child(93n) {
-  animation-delay: 18.6s;
-}
-.menu-page .menu *:nth-child(94n) {
-  animation-delay: 18.8s;
-}
-.menu-page .menu *:nth-child(95n) {
-  animation-delay: 19s;
-}
-.menu-page .menu *:nth-child(96n) {
-  animation-delay: 19.2s;
-}
-.menu-page .menu *:nth-child(97n) {
-  animation-delay: 19.4s;
-}
-.menu-page .menu *:nth-child(98n) {
-  animation-delay: 19.6s;
-}
-.menu-page .menu *:nth-child(99n) {
-  animation-delay: 19.8s;
-}
-.menu-page .menu *:nth-child(100n) {
-  animation-delay: 20s;
 }
 @keyframes load {
   0% {
     opacity: 0;
-    top: 15px;
+    transform: translateY(15px);
   }
   100% {
     opacity: 1;
-    top: 0;
+    transform: translateY(0);
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-page .menu-section {
+    padding: 5% 5%;
+  }
+  .menu-page .menu-section i.fa-heart {
+    right: 5%;
+    top: 5%;
   }
 }
 

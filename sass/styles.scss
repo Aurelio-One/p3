@@ -15,14 +15,10 @@ body {
 }
 
 main {
-    max-width: 768px;
-    margin: auto;
+    section {
+        padding: 50px 20px;
+    }
 }
-
-section {
-    padding: 50px 20px;
-}
-
 
 h1,
 h2,
@@ -57,10 +53,9 @@ a {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
     background: linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);
     width: 185px;
+    cursor: pointer;
 
     &:hover {
-        cursor: pointer;
-
         & .btn-bg {
             opacity: 1;
         }
@@ -117,10 +112,7 @@ i.fa-heart {
     display: inline-block;
     position: relative;
     color: #000;
-
-    &:hover {
-        cursor: pointer;
-    }
+    cursor: pointer;
 
     &:after {
         font-family: FontAwesome;
@@ -128,16 +120,15 @@ i.fa-heart {
         position: absolute;
         left: 0;
         top: 0;
-        height: 0;
-        overflow: hidden;
+        transform: scale(0);
         background: linear-gradient(0deg, $secondary-color 0%, $primary-color 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        transition: height 500ms ease;
+        transition: transform 300ms ease;
     }
 
     &:hover:after {
-        height: 100%
+        transform: scale(1);
     }
 }
 
@@ -157,5 +148,12 @@ footer {
         i {
             width: 25px;
         }
+    }
+}
+
+/* TABLET + DESKTOP VIEW */
+@media screen and (min-width: 768px) {
+    main section {
+        padding: 50px 10%;
     }
 }

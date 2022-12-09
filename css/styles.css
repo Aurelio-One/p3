@@ -12,12 +12,7 @@ body {
   color: #000;
 }
 
-main {
-  max-width: 768px;
-  margin: auto;
-}
-
-section {
+main section {
   padding: 50px 20px;
 }
 
@@ -53,8 +48,6 @@ a {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   width: 185px;
-}
-.btn:hover {
   cursor: pointer;
 }
 .btn:hover .btn-bg {
@@ -108,8 +101,6 @@ i.fa-heart {
   display: inline-block;
   position: relative;
   color: #000;
-}
-i.fa-heart:hover {
   cursor: pointer;
 }
 i.fa-heart:after {
@@ -118,15 +109,14 @@ i.fa-heart:after {
   position: absolute;
   left: 0;
   top: 0;
-  height: 0;
-  overflow: hidden;
+  transform: scale(0);
   background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: height 500ms ease;
+  transition: transform 300ms ease;
 }
 i.fa-heart:hover:after {
-  height: 100%;
+  transform: scale(1);
 }
 
 /* FOOTER */
@@ -142,6 +132,13 @@ footer span {
 }
 footer a i {
   width: 25px;
+}
+
+/* TABLET + DESKTOP VIEW */
+@media screen and (min-width: 768px) {
+  main section {
+    padding: 50px 10%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

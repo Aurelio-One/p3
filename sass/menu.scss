@@ -27,6 +27,11 @@
         }
     }
 
+    .menu-section {
+        max-width: 1200px;
+        margin: auto;
+    }
+
     /* MAIN SECTION */
     .menu-section {
         border-radius: 35px 35px 0 0;
@@ -43,8 +48,7 @@
 
         h1 {
             font-family: $secondary-font;
-            font-size: 28px;
-            max-width: calc(100vw - 100px);
+            font-size: 26px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -78,24 +82,24 @@
         }
 
         .menu-item {
+            max-width: 100%;
+            padding: 15px;
             background-color: #FFF;
             border-radius: 10px;
             box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
-            height: 70px;
             overflow: hidden;
-            position: relative;
+            cursor: pointer;
 
             .selected {
                 background-color: $tertiary-color;
                 color: #FFF;
                 border-radius: 0 10px 10px 0;
+                margin: -15px -75px -15px 25px;
                 width: 60px;
-                text-align: center;
-                height: 70px;
-                line-height: 75px;
-                position: absolute;
-                right: -60px;
-                transition: right 500ms ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition-duration: 500ms;
 
                 i {
                     font-size: 22px;
@@ -105,53 +109,48 @@
                 }
             }
 
-            .menu-item-details {
-                align-items: end;
-                width: calc(100% - 0px);
-                transition: width 500ms ease;
 
-                .menu-item-name {
-                    padding: 10px 25px 10px 10px;
+
+            .menu-item-name {
+                overflow: hidden;
+                flex: 1;
+
+                h3 {
+                    margin-bottom: 5px;
+                    display: block;
+                    white-space: nowrap;
                     overflow: hidden;
-
-                    h3 {
-                        margin-bottom: 5px;
-                        display: block;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-
-                    span {
-                        display: block;
-                        font-weight: 300;
-                        font-size: 14px;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
+                    text-overflow: ellipsis;
                 }
 
-                .menu-item-price {
-                    text-align: right;
-                    font-weight: 700;
-                    padding: 10px 25px 10px 0;
+                span {
+                    display: block;
+                    font-weight: 300;
+                    font-size: 14px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
 
+            .menu-item-price {
+                text-align: right;
+                font-weight: 700;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                padding-left: 0.5rem;
+            }
+
+
             /* MENU ITEM HOVER ANIMATION */
             &:hover {
-                cursor: pointer;
                 .selected {
-                    right: 0;
+                    margin-right: -15px;
 
                     i {
                         transform: rotate(360deg);
                     }
-                }
-
-                .menu-item-details {
-                    width: calc(100% - 60px);
                 }
             }
         }
@@ -166,24 +165,36 @@
     .menu-item,
     h2 {
         opacity: 0;
-        animation: load 1s ease 500ms forwards;
+        animation: load 1s forwards;
     }
 
-    @for $i from 1 through 100 {
+    @for $i from 1 through 20 {
         .menu *:nth-child(#{$i}n) {
-            animation-delay: #{$i * 0.2}s;
+            animation-delay: #{$i * .25}s;
         }
     }
 
     @keyframes load {
         0% {
             opacity: 0;
-            top: 15px;
+            transform: translateY(15px);
         }
 
         100% {
             opacity: 1;
-            top: 0;
+            transform: translateY(0);
+        }
+    }
+
+    /* TABLET + DESKTOP VIEW */
+    @media screen and (min-width: 768px) {
+        .menu-section {
+            padding: 5% 5%;
+
+            i.fa-heart {
+                right: 5%;
+                top: 5%;
+            }
         }
     }
 }
