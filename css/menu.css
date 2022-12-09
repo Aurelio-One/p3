@@ -84,17 +84,17 @@
   line-height: 75px;
   position: absolute;
   right: -60px;
-  transition: right 600ms ease;
+  transition: right 500ms ease;
 }
 .menu-page .menu-section .menu-item .selected i {
   font-size: 22px;
   transform: rotate(0deg);
-  transition: transform 600ms ease;
+  transition: transform 500ms ease;
 }
 .menu-page .menu-section .menu-item .menu-item-details {
   align-items: end;
   width: calc(100% - 0px);
-  transition: width 600ms ease;
+  transition: width 500ms ease;
 }
 .menu-page .menu-section .menu-item .menu-item-details .menu-item-name {
   padding: 10px 25px 10px 10px;

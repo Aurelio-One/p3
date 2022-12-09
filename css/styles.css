@@ -41,19 +41,36 @@ a {
 
 button {
   display: block;
+  position: relative;
+  z-index: 1;
   border-radius: 50px;
   height: 50px;
   padding: 0 25px;
   margin: 10px auto;
   color: #FFF;
   border: none;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  width: 185px;
 }
 button:hover {
   cursor: pointer;
+}
+button:hover .btn-bg {
+  opacity: 1;
+}
+button .btn-bg {
+  position: absolute;
+  border-radius: 50px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(0deg, #a16be0 0%, #ff93e1 100%);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 500ms;
 }
 
 /* UTILITIES */
@@ -86,7 +103,7 @@ header .header-logo {
 i.fa-heart {
   font-weight: 100;
   font-size: 26px;
-  height: 26px;
+  height: 28px;
   display: inline-block;
   position: relative;
   color: #000;
