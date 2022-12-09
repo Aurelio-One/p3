@@ -113,11 +113,11 @@ i.fa-heart {
         background: linear-gradient(0deg, $secondary-color 0%, $primary-color 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: like-empty 500ms ease forwards;
+        transition: height 500ms ease;
     }
 
     &:hover:after {
-        animation: like-fill 500ms ease forwards;
+        height: 100%
     }
 }
 
@@ -137,26 +137,5 @@ footer {
         i {
             width: 25px;
         }
-    }
-}
-
-/* ANIMATIONS */
-@keyframes like-fill {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 100%;
-    }
-}
-
-@keyframes like-empty {
-    from {
-        height: 100%;
-    }
-
-    to {
-        height: 0;
     }
 }

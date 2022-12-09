@@ -95,15 +95,20 @@
                 line-height: 75px;
                 position: absolute;
                 right: -60px;
+                transition: right 600ms ease;
 
                 i {
                     font-size: 22px;
+                    transform: rotate(0deg);
+                    transition: transform 600ms ease;
+
                 }
             }
 
             .menu-item-details {
                 align-items: end;
                 width: calc(100% - 0px);
+                transition: width 600ms ease;
 
                 .menu-item-name {
                     padding: 10px 25px 10px 10px;
@@ -133,6 +138,22 @@
                     padding: 10px 25px 10px 0;
                 }
             }
+
+            /* MENU ITEM HOVER ANIMATION */
+            &:hover {
+                cursor: pointer;
+                .selected {
+                    right: 0;
+
+                    i {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                .menu-item-details {
+                    width: calc(100% - 60px);
+                }
+            }
         }
 
         button {
@@ -140,112 +161,29 @@
             margin: 30px auto 0 auto;
         }
     }
-}
 
-
-
-/* ANIMATIONS */
-
-
-/* menu item loading */
-
-.menu-item,
-h2 {
-    opacity: 0;
-    animation: load 1s ease 500ms forwards;
-}
-
-@for $i from 1 through 100 {
-    .menu *:nth-child(#{$i}n) {
-        animation-delay: #{$i * 0.2}s;
-    }
-}
-
-@keyframes load {
-    0% {
+    /* MENU ITEMS LOADING ANIMATION */
+    .menu-item,
+    h2 {
         opacity: 0;
-        top: 15px;
+        animation: load 1s ease 500ms forwards;
     }
 
-    100% {
-        opacity: 1;
-        top: 0;
-    }
-}
-
-/* menu item hover */
-
-.menu-item:hover {
-    .selected {
-        cursor: pointer;
-        animation: selected 500ms ease forwards;
-
-        i {
-            animation: selected-icon 500ms ease forwards;
+    @for $i from 1 through 100 {
+        .menu *:nth-child(#{$i}n) {
+            animation-delay: #{$i * 0.2}s;
         }
     }
-}
 
-.menu-item:hover .menu-item-details {
-    cursor: pointer;
-    animation: item-shrink 500ms ease forwards;
-}
+    @keyframes load {
+        0% {
+            opacity: 0;
+            top: 15px;
+        }
 
-.menu-item .selected {
-    animation: unselected 500ms ease forwards;
-}
-
-.menu-item .menu-item-details {
-    animation: item-grow 500ms ease forwards;
-}
-
-@keyframes selected {
-    from {
-        right: -60px;
-    }
-
-    to {
-        right: 0
-    }
-}
-
-@keyframes unselected {
-    from {
-        right: 0;
-    }
-
-    to {
-        right: -60px;
-    }
-}
-
-@keyframes selected-icon {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-@keyframes item-shrink {
-    from {
-        width: 100%;
-    }
-
-    to {
-        width: calc(100% - 60px)
-    }
-}
-
-@keyframes item-grow {
-    from {
-        width: calc(100% - 60px)
-    }
-
-    to {
-        width: 100%;
+        100% {
+            opacity: 1;
+            top: 0;
+        }
     }
 }
