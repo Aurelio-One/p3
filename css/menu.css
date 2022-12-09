@@ -36,6 +36,10 @@
 .menu-page .menu-section h1 {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
+  max-width: calc(100vw - 100px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-page .menu-section i.fa-heart {
   position: absolute;
@@ -75,7 +79,7 @@
   width: 60px;
   text-align: center;
   height: 70px;
-  line-height: 70px;
+  line-height: 75px;
   position: absolute;
   right: -60px;
 }
@@ -120,8 +124,7 @@
 .menu-item,
 h2 {
   opacity: 0;
-  animation: load 1s ease 500ms;
-  animation-fill-mode: forwards;
+  animation: load 1s ease 500ms forwards;
 }
 
 .menu *:nth-child(1n) {
@@ -537,28 +540,23 @@ h2 {
 /* menu item hover */
 .menu-item:hover .selected {
   cursor: pointer;
-  animation: selected 500ms ease;
-  animation-fill-mode: forwards;
+  animation: selected 500ms ease forwards;
 }
 .menu-item:hover .selected i {
-  animation: selected-icon 500ms ease;
-  animation-fill-mode: forwards;
+  animation: selected-icon 500ms ease forwards;
 }
 
 .menu-item:hover .menu-item-details {
   cursor: pointer;
-  animation: item-shrink 500ms ease;
-  animation-fill-mode: forwards;
+  animation: item-shrink 500ms ease forwards;
 }
 
 .menu-item .selected {
-  animation: unselected 500ms ease;
-  animation-fill-mode: forwards;
+  animation: unselected 500ms ease forwards;
 }
 
 .menu-item .menu-item-details {
-  animation: item-grow 500ms ease;
-  animation-fill-mode: forwards;
+  animation: item-grow 500ms ease forwards;
 }
 
 @keyframes selected {
