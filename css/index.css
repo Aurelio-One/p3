@@ -88,8 +88,8 @@
   font-size: 20px;
   line-height: 24px;
 }
-.top-section button {
-  width: auto;
+.top-section .btn {
+  width: fit-content;
 }
 
 /* HOWTO SECTION */
